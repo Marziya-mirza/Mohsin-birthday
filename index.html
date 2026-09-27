@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mohsin 🎂</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(135deg,#fff1f7,#f5efff,#eef8ff);
+  color:#333;
+  overflow-x:hidden;
+}
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:25px;
+  position:relative;
+}
+.card{
+  width:min(680px,94%);
+  background:rgba(255,255,255,.86);
+  border-radius:30px;
+  padding:42px 24px;
+  box-shadow:0 15px 50px rgba(80,50,100,.16);
+  backdrop-filter:blur(8px);
+}
+.small{font-size:18px;color:#777}
+h1{
+  font-size:clamp(42px,10vw,78px);
+  margin:10px 0;
+  color:#e75480;
+}
+h2{font-size:30px;color:#7c55b8}
+.message{font-size:19px;line-height:1.7}
+button{
+  border:0;
+  border-radius:999px;
+  padding:15px 25px;
+  font-size:17px;
+  background:#e75480;
+  color:white;
+  cursor:pointer;
+  margin:8px;
+  box-shadow:0 8px 20px rgba(231,84,128,.25);
+}
+button:hover{transform:translateY(-2px)}
+.section{
+  padding:70px 18px;
+  max-width:1000px;
+  margin:auto;
+  text-align:center;
+}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-top:25px;
+}
+.photo{
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  border-radius:24px;
+  box-shadow:0 10px 30px rgba(0,0,0,.14);
+  background:white;
+}
+.note{
+  background:white;
+  border-radius:24px;
+  padding:28px;
+  margin:18px auto;
+  max-width:720px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  font-size:18px;
+  line-height:1.7;
+}
+.countdown{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:25px 0;
+}
+.time{
+  min-width:90px;
+  padding:16px 10px;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+.time b{display:block;font-size:28px;color:#e75480}
+.time span{font-size:13px;color:#777}
+footer{padding:40px 20px;text-align:center;color:#777}
+.heart{
+  position:fixed;
+  bottom:-30px;
+  font-size:24px;
+  animation:float 5s linear forwards;
+  pointer-events:none;
+  z-index:5;
+}
+@keyframes float{
+  from{transform:translateY(0) rotate(0);opacity:1}
+  to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+.pop{
+  animation:pop .7s ease both;
+}
+@keyframes pop{
+  from{transform:scale(.7);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+.hidden{display:none}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="card pop">
+    <div class="small">A little birthday surprise for...</div>
+    <h1>Mohsin 🎂</h1>
+    <h2>My Favourite Trouble Maker 😭❤️</h2>
+    <p class="message">
+      Happy Birthday to the one person who can annoy me in 2 seconds
+      and make me laugh in the next 2 seconds. 😂
+    </p>
+    <button onclick="startSurprise()">Open Your Surprise 🎁</button>
+    <button onclick="document.getElementById('memories').scrollIntoView()">See Memories 📸</button>
+  </div>
+</section>
+
+<section class="section hidden" id="surprise">
+  <h2>🎉 Happy Birthday, Mohsin! 🎉</h2>
+  <div class="note">
+    <p><b>11 May 2010 → 11 May 2027</b></p>
+    <p>
+      From childhood nonsense to today's random fights,
+      you've always been one of the most special people in my life. 🥹❤️
+    </p>
+    <p>
+      I hope you get everything you wish for, lots of happiness,
+      good health, success and obviously... thodi akal bhi. 😂
+    </p>
+    <p><b>Love you, bhai! ❤️</b></p>
+  </div>
+
+  <h2>⏳ Countdown to Your Birthday</h2>
+  <div class="countdown">
+    <div class="time"><b id="days">0</b><span>Days</span></div>
+    <div class="time"><b id="hours">0</b><span>Hours</span></div>
+    <div class="time"><b id="mins">0</b><span>Minutes</span></div>
+    <div class="time"><b id="secs">0</b><span>Seconds</span></div>
+  </div>
+</section>
+
+<section class="section" id="memories">
+  <h2>📸 Our Memories</h2>
+  <p class="small">Some random pictures of two people who clearly need better pictures 😂</p>
+  <div class="gallery">
+    <img class="photo" src="photos/photo1.jpeg" alt="Memory 1">
+    <img class="photo" src="photos/photo2.jpeg" alt="Memory 2">
+    <img class="photo" src="photos/photo3.jpeg" alt="Memory 3">
+    <img class="photo" src="photos/photo4.jpeg" alt="Memory 4">
+    <img class="photo" src="photos/photo5.jpeg" alt="Memory 5">
+  </div>
+</section>
+
+<section class="section">
+  <h2>😂 Official Brother Certificate</h2>
+  <div class="note">
+    <p>🏆 <b>Certificate of Being Mohsin</b></p>
+    <p>For outstanding achievements in:</p>
+    <p>
+      Annoying his sister • Stealing food • Randomly appearing in photos •
+      Acting innocent after causing chaos • Being impossible to replace ❤️
+    </p>
+    <p><b>Result: 100/100 Bhai Points 😭😂</b></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="note">
+    <h2>💌 One Last Thing</h2>
+    <p>
+      No matter how much we fight or irritate each other,
+      you'll always be my little brother and one of my favourite people.
+      May Allah always keep you happy, safe and successful. 🤍
+    </p>
+    <p><b>Happy Birthday, Mohsin! 🎂❤️</b></p>
+  </div>
+</section>
+
+<footer>
+  Made with ❤️ by your sister
+</footer>
+
+<script>
+function startSurprise(){
+  document.getElementById("surprise").classList.remove("hidden");
+  document.getElementById("surprise").scrollIntoView({behavior:"smooth"});
+  for(let i=0;i<25;i++){
+    setTimeout(()=>{
+      const h=document.createElement("div");
+      h.className="heart";
+      h.innerHTML=["❤️","💗","💖","🎉","✨"][Math.floor(Math.random()*5)];
+      h.style.left=Math.random()*100+"vw";
+      h.style.animationDuration=(3+Math.random()*3)+"s";
+      document.body.appendChild(h);
+      setTimeout(()=>h.remove(),6500);
+    },i*100);
+  }
+}
+
+function updateCountdown(){
+  const now=new Date();
+  let year=now.getFullYear();
+  let target=new Date(year,4,11,0,0,0);
+  if(now>=target) target=new Date(year+1,4,11,0,0,0);
+  const diff=target-now;
+  document.getElementById("days").textContent=Math.floor(diff/86400000);
+  document.getElementById("hours").textContent=Math.floor(diff/3600000)%24;
+  document.getElementById("mins").textContent=Math.floor(diff/60000)%60;
+  document.getElementById("secs").textContent=Math.floor(diff/1000)%60;
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+</script>
+</body>
+</html>
